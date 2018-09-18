@@ -2,7 +2,7 @@ package com.vertex.homework1.tkachenko;
 
 class Marker {
 
-    private int lineLength = 10000;
+    private int lineLength = 100000;
     private String color = "<red>";
 
     String getColor(){
