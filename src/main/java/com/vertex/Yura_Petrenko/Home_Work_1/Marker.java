@@ -5,7 +5,7 @@ public class Marker {
     private int markerCountRed = 3;
     private String MarkerColorRed = "Red";
 
-    private int markerCountBlack = 5;
+    private int markerCountBlack = 2;
     private String MarkerColorBlack = "Black";
 
     private int markerCountBlue = 1;
