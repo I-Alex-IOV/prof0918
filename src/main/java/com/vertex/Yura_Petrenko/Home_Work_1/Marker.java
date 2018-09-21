@@ -35,8 +35,6 @@ public class Marker {
         return colorCount;
     }
 
-
-
     public void ColorText(String text) {
 
         if (currentColor.contains("Red")) {
@@ -50,6 +48,9 @@ public class Marker {
             System.out.println("<blue>" + text + "</blue>");
         }
 
-
     }
+    public void setColorCount(){
+        this.colorCount = this.colorCount - 1 ;
+    }
+
 }
