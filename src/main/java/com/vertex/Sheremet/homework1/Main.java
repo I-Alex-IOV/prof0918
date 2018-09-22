@@ -1,6 +1,6 @@
-package HomeWork1;
+package com.vertex.Sheremet.homework1;
 
-import HomeWork1.Market.Marketed;
+import com.vertex.Sheremet.homework1.Market.Marketed;
 
 public class Main {
     public static void main(String[] args) {

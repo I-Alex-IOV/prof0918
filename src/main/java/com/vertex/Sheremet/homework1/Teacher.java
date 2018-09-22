@@ -1,6 +1,10 @@
-package HomeWork1;
+package com.vertex.Sheremet.homework1;
 
-import HomeWork1.Market.*;
+
+import com.vertex.Sheremet.homework1.Market.MarketBlack;
+import com.vertex.Sheremet.homework1.Market.MarketRed;
+import com.vertex.Sheremet.homework1.Market.MarketWhite;
+import com.vertex.Sheremet.homework1.Market.Marketed;
 
 public class Teacher  {
     public Marketed getMarket (MarketTypes types){

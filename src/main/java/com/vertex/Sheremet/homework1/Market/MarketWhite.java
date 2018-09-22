@@ -1,4 +1,4 @@
-package HomeWork1.Market;
+package com.vertex.Sheremet.homework1.Market;
 
 public class MarketWhite implements Marketed {
     @Override
