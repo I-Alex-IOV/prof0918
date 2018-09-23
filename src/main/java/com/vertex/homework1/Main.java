@@ -1,9 +1,13 @@
 package com.vertex.homework1;
 
-public class Main {
+import com.vertex.homework1.markerFactory.MarkerTypes;
 
+public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, my first homework");
-        System.out.println("Markers should be here");
+
+        Teacher teacher = new Teacher();
+        teacher.writeText(teacher.getMarker().getMarker(MarkerTypes.RED), "Красный текст");
+        teacher.writeText(teacher.getMarker().getMarker(MarkerTypes.BLACK), "Черный текст");
+        teacher.writeText(teacher.getMarker().getMarker(MarkerTypes.GREEN), "Зеленый текст");
     }
 }
