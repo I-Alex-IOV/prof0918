@@ -7,6 +7,7 @@ import com.vertex.homework2.factory.TypeOfFigure;
 import com.vertex.homework2.figure.Figure;
 import com.vertex.homework2.figure.Oval;
 import com.vertex.homework2.figure.Point;
+import com.vertex.homework2.figure.Rectangular;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -52,7 +53,7 @@ public class Artist implements ArtisrInterface {
                         figure.showFigure(point);
                         if (figure instanceof Oval) {
                             ((OvalDecorator) figure).moShowFigure();
-                            if (figure instanceof Oval) {
+                            if (figure instanceof Rectangular) {
                                 ((RectagularDecorator) figure).moShowFigure();
                             }
                         }
