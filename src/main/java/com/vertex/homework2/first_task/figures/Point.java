@@ -22,6 +22,7 @@ public final class Point {
         return new Point(this.x, y);
     }
 
+    // TODO: 24.09.2018 what about getters? why do we need Point that can't be read?
     @Override
     public String toString() {
         return "point " +

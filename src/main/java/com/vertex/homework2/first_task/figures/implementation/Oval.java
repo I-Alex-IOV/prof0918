@@ -13,6 +13,7 @@ public class Oval extends AbstractFigure {
 
     public static class Builder{
 
+        // TODO: 24.09.2018  private?
         Oval oval;
 
         public Builder(){

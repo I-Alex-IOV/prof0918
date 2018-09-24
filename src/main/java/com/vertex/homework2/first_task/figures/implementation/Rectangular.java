@@ -2,6 +2,7 @@ package com.vertex.homework2.first_task.figures.implementation;
 
 import com.vertex.homework2.first_task.figures.Point;
 
+// TODO: 24.09.2018 strange approach =)
 //Билдер является декоратором. Расширяет функционал прямоугольника, если захотелось переделать из квадрата. Где использовать, не придумала, поэтому "is never used"
 public class Rectangular extends AbstractFigure {
 

@@ -14,5 +14,6 @@ public class FigureFactory {
         return SingletonHolder.HOLDER_INSTANCE ;
     }
 
+    // TODO: 24.09.2018 wrong place for this method. Who draws figures?
     public AbstractFigure drawFigure(FigureType figureType){return figureType.draw();}
 }

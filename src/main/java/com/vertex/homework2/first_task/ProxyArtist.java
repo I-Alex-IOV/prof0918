@@ -7,6 +7,7 @@ public class ProxyArtist implements Figure {
     Artist delegat;
 
     public ProxyArtist(){
+        // TODO: 24.09.2018 why new?
         this.delegat = new Artist();
     }
 

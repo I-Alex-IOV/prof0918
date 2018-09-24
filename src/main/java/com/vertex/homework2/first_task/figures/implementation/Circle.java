@@ -10,5 +10,5 @@ public class Circle extends AbstractFigure {
         this.setHeight(side);
     }
 
-
+// TODO: 24.09.2018 builder?
 }

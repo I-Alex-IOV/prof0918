@@ -6,6 +6,7 @@ import com.vertex.homework2.first_task.figures.Point;
 
 public abstract class AbstractFigure implements Figure {
 
+    // TODO: 24.09.2018 poor point. All other variables have real names...
     private Point p;
     private double width;
     private double height;
@@ -22,6 +23,7 @@ public abstract class AbstractFigure implements Figure {
         this.height = height;
     }
 
+    // TODO: 24.09.2018 P? is it 3,1415?
     void setP(Point p) {
         this.p = p;
     }
