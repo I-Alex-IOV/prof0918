@@ -17,4 +17,8 @@ public class BmwE28 extends AbstractCar {
     public void stop() {
         System.out.println("Stopping Shark " + this);
     }
+
+    public boolean atractsGirls() {
+        return true;
+    }
 }

@@ -1,10 +1,13 @@
 package com.vertex.patterns;
 
+import lombok.ToString;
+
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+@ToString
 public class ImmutableUser {
 
     private String name;
@@ -51,6 +54,26 @@ public class ImmutableUser {
         return new ImmutableUser(this.name, this.secondName, this.age, parents);
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ImmutableUser user = (ImmutableUser) o;
+
+        if (age != user.age) return false;
+        if (name != null ? !name.equals(user.name) : user.name != null) return false;
+        return secondName != null ? secondName.equals(user.secondName) : user.secondName == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (secondName != null ? secondName.hashCode() : 0);
+        result = 31 * result + age;
+        return result;
+    }
 
     public static void main(String[] args) {
 

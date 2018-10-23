@@ -18,5 +18,7 @@ public class ToyotaCorola extends AbstractCar {
         System.out.println("Stopping Toyota Corola " + this);
     }
 
-
+    public boolean myGrannyLoves() {
+        return true;
+    }
 }

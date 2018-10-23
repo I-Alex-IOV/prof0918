@@ -17,4 +17,8 @@ public class MercedesG extends AbstractCar {
     public void stop() {
         System.out.println("Stopping Kubik " + this);
     }
+
+    public boolean scaresPeople() {
+        return true;
+    }
 }
