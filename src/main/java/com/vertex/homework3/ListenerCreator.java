@@ -11,6 +11,38 @@ public class ListenerCreator {
     private ArrayList<Lissiner> lissinerArrayList;
     private  int marker;
 
+    public List<String> getListOfMan() {
+        return listOfMan;
+    }
+
+    public void setListOfMan(List<String> listOfMan) {
+        this.listOfMan = listOfMan;
+    }
+
+    public List<String> getListOfWoman() {
+        return listOfWoman;
+    }
+
+    public void setListOfWoman(List<String> listOfWoman) {
+        this.listOfWoman = listOfWoman;
+    }
+
+    public ArrayList<Lissiner> getLissinerArrayList() {
+        return lissinerArrayList;
+    }
+
+    public void setLissinerArrayList(ArrayList<Lissiner> lissinerArrayList) {
+        this.lissinerArrayList = lissinerArrayList;
+    }
+
+    public int getMarker() {
+        return marker;
+    }
+
+    public void setMarker(int marker) {
+        this.marker = marker;
+    }
+
     public void createListNamesMan() {
         listOfMan =Stream.of(
                 "Абрам",

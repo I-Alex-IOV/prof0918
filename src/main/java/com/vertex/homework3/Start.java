@@ -6,7 +6,13 @@ public class Start {
         listenerCreator.createListNamesMan();
         listenerCreator.createListNamesWoman();
         listenerCreator.createListOfListener();
+        System.out.println();
         listenerCreator.say();
-
+        System.out.println();
+        TicketWindow ticketWindow=new TicketWindow();
+        ticketWindow.ticketPrinting();
+        ticketWindow.shoy();
+        System.out.println();
+        ticketWindow.ticketSelling();
     }
 }
