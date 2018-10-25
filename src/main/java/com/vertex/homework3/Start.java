@@ -5,6 +5,6 @@ public class Start {
         Kassa kassa = new Kassa();
         kassa.ticketSelling();
         System.out.println();
-        //kassa.shoyTicketLissinerMap();
+        kassa.shoyTicketLissinerMap();
     }
 }
