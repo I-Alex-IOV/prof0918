@@ -1,8 +1,6 @@
 package com.vertex.patterns;
 
-import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ImmutableUserWithBuilder {
@@ -20,6 +18,13 @@ public class ImmutableUserWithBuilder {
     }
 
     private ImmutableUserWithBuilder() {}
+
+    public ImmutableUserWithBuilder(ImmutableUserWithBuilder user) {
+        this.name = user.name;
+        this.secondName = user.secondName;
+        this.age = user.age;
+        this.parents = user.parents;
+    }
 
     public String getName() {
         return name;
@@ -42,6 +47,10 @@ public class ImmutableUserWithBuilder {
 
         public Builder(){
             user = new ImmutableUserWithBuilder();
+        }
+
+        public Builder(ImmutableUserWithBuilder user) {
+            this.user = new ImmutableUserWithBuilder(user);
         }
 
         public Builder withName(String name){
