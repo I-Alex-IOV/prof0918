@@ -23,5 +23,6 @@ public class Start {
         final HashMap<Ticket, Lissiner> ticketLissinerMap;
         ticketLissinerMap= kassa.ticketSelling(listOfTicketsPurchased,ticketArrayList);
         System.out.println(ticketLissinerMap.entrySet());
+        System.out.println();
     }
 }
