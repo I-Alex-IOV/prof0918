@@ -6,42 +6,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ListenerCreator {
-    private List<String> listOfMan;
+    private List<String>listOfMan;
     private List<String>listOfWoman;
-    private ArrayList<Lissiner> lissinerArrayList;
     private  int marker;
-
-    public List<String> getListOfMan() {
-        return listOfMan;
-    }
-
-    public void setListOfMan(List<String> listOfMan) {
-        this.listOfMan = listOfMan;
-    }
-
-    public List<String> getListOfWoman() {
-        return listOfWoman;
-    }
-
-    public void setListOfWoman(List<String> listOfWoman) {
-        this.listOfWoman = listOfWoman;
-    }
-
-    public ArrayList<Lissiner> getLissinerArrayList() {
-        return lissinerArrayList;
-    }
-
-    public void setLissinerArrayList(ArrayList<Lissiner> lissinerArrayList) {
-        this.lissinerArrayList = lissinerArrayList;
-    }
-
-    public int getMarker() {
-        return marker;
-    }
-
-    public void setMarker(int marker) {
-        this.marker = marker;
-    }
 
     public void createListNamesMan() {
         listOfMan =Stream.of(
@@ -76,6 +43,32 @@ public class ListenerCreator {
 
 
     }
+
+    public List<String> getListOfMan() {
+        return listOfMan;
+    }
+
+    public void setListOfMan(List<String> listOfMan) {
+        this.listOfMan = listOfMan;
+    }
+
+    public List<String> getListOfWoman() {
+        return listOfWoman;
+    }
+
+    public void setListOfWoman(List<String> listOfWoman) {
+        this.listOfWoman = listOfWoman;
+    }
+
+    public int getMarker() {
+        return marker;
+    }
+
+    public void setMarker(int marker) {
+        this.marker = marker;
+    }
+
+
     public void createListNamesWoman() {
 
         listOfWoman = Stream.of("Валентина",
@@ -107,7 +100,7 @@ public class ListenerCreator {
 
     }
 
-    public void createListOfListener() {
+    public ArrayList<Lissiner> createListOfListener() {
         ArrayList<Lissiner> lissinerArrayListWoman = new ArrayList<>();
         for (int i = 0; i < marker; i++) {
             lissinerArrayListWoman.add(new Lissiner(listOfWoman.get(i), "woman", i));
@@ -120,7 +113,7 @@ public class ListenerCreator {
         }
         lissinerQueueMan.sort(Lissiner.comparator1);
 
-        lissinerArrayList = new ArrayList<>();
+        ArrayList<Lissiner>  lissinerArrayList =  new ArrayList<>();
         for (int i = 0; i < lissinerArrayListWoman.size(); i++) {
             lissinerArrayList.add(lissinerArrayListWoman.get(i));
             System.out.println(lissinerArrayListWoman.get(i).toString()+"in the qeue");
@@ -129,13 +122,8 @@ public class ListenerCreator {
             lissinerArrayList.add(lissinerQueueMan.get(i));
             System.out.println(lissinerQueueMan.get(i).toString()+"in the qeue");
         }
-
-
-    }
-    public void say(){
-        for (var a :lissinerArrayList){
-            System.out.println(a.toString());
-
-        }
+        System.out.println();
+        return lissinerArrayList;
     }
 }
+
