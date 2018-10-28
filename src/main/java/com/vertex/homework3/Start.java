@@ -9,7 +9,6 @@ public class Start {
         TicketWindow ticketWindow = new TicketWindow();
         ticketArrayList=ticketWindow.ticketPrinting();
 
-        System.out.println();
         final ArrayList<Lissiner> lissinerArrayList;
         ListenerCreator listenerCreator = new ListenerCreator();
         listenerCreator.createListNamesMan();
@@ -23,6 +22,6 @@ public class Start {
         final HashMap<Ticket, Lissiner> ticketLissinerMap;
         ticketLissinerMap= kassa.ticketSelling(listOfTicketsPurchased,ticketArrayList);
         System.out.println(ticketLissinerMap.entrySet());
-        System.out.println();
+
     }
 }
