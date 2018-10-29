@@ -55,6 +55,7 @@ public class PhilharmonicAdministration {
                 System.out.println("Владелец билета номер " + arrayList.get(i)
                         .getNumber() + " с кол-вом брошей  " + ticketLissinerMap.get(arrayList.get(i))
                         .getNumberOfBrooches() + " получает приз");
+                System.out.println();
             }
 
         }

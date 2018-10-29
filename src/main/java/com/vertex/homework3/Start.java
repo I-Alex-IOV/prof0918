@@ -25,7 +25,7 @@ public class Start {
         PhilharmonicAdministration philharmonicAdministration = new PhilharmonicAdministration();
         philharmonicAdministration.searchForWinningTickets(ticketLissinerMap);
         philharmonicAdministration.broadcastAnnouncement(ticketLissinerMap);
-        System.out.println();
+
 
     }
 }
