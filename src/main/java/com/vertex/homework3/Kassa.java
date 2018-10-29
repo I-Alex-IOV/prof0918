@@ -25,6 +25,5 @@ public class Kassa {
     }
     public void showMap(HashMap<Ticket, Lissiner> ticketLissinerMap){
         System.out.println(ticketLissinerMap.entrySet());
-        System.out.println();
     }
 }
