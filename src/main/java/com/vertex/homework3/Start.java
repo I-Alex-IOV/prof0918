@@ -2,6 +2,7 @@ package com.vertex.homework3;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 
 public class Start {
     public static void main(String[] args)  {
@@ -25,6 +26,11 @@ public class Start {
         PhilharmonicAdministration philharmonicAdministration = new PhilharmonicAdministration();
         philharmonicAdministration.searchForWinningTickets(ticketLissinerMap);
         philharmonicAdministration.broadcastAnnouncement(ticketLissinerMap);
+
+        BonusKlass bonusKlass = new BonusKlass();
+        final HashSet<Lissiner> hashSetlissinersWhoBoughtMoreThanOne;
+        hashSetlissinersWhoBoughtMoreThanOne=bonusKlass.gettingAListForABonus(ticketLissinerMap);
+        bonusKlass.announcementOfTheListAndBonus(hashSetlissinersWhoBoughtMoreThanOne);
 
 
     }
