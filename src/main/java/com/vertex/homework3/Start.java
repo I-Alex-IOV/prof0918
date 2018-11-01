@@ -30,8 +30,9 @@ public class Start {
         BonusKlass bonusKlass = new BonusKlass();
         final HashSet<Lissiner> hashSetlissinersWhoBoughtMoreThanOne;
         hashSetlissinersWhoBoughtMoreThanOne=bonusKlass.gettingAListForABonus(ticketLissinerMap);
+        HackHashSet hackHashSet = new HackHashSet();
+        hackHashSet.Hacking( hashSetlissinersWhoBoughtMoreThanOne);
         bonusKlass.announcementOfTheListAndBonus(hashSetlissinersWhoBoughtMoreThanOne);
-
 
     }
 }
