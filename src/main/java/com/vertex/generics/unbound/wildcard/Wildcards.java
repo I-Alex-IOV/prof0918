@@ -60,9 +60,7 @@ public class Wildcards {
     }
 
     public static void main(String[] args) {
-        Holder raw = new Holder<Long>();
-        // Or:
-        raw = new Holder();
+        Holder raw = new Holder();
         Holder<Long> qualified = new Holder<Long>();
         Holder<?> unbounded = new Holder<Long>();
         Holder<? extends Long> bounded = new Holder<Long>();

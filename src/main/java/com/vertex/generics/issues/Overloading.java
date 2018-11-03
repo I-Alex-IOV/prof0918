@@ -1,12 +1,9 @@
 package com.vertex.generics.issues;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by sweet_home on 04.03.17.
  */
-public class Overloading<T extends String, U extends Byte> {
+public class Overloading<T extends A, U extends B> {
 
     public void myMethod(T t) {
         System.out.println(t);
@@ -18,7 +15,17 @@ public class Overloading<T extends String, U extends Byte> {
 
 
     public static void main(String[] args) {
-        List<? extends RuntimeException> exceptions = new ArrayList<>();
-        RuntimeException runtimeException = exceptions.get(0);
+        Overloading<A, B> overloading = new Overloading<>();
+//        overloading.myMethod(new AB());
     }
+
+}
+
+class A {
+}
+
+interface B {
+}
+
+class AB extends A implements B {
 }

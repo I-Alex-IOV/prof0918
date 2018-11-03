@@ -9,8 +9,8 @@ interface Payable<T> {
 public class ParameteryzedInterface {
 }
 
-class Employee implements Payable<Object> {
+class Employee implements Payable<Employee> {
 }
 
-class Hourly extends Employee implements Payable<Object> {
-}
+//class Hourly extends Employee implements Payable<Hourly> {
+//}

@@ -38,7 +38,18 @@ public class Spectator implements Comparable<Spectator> {
         Spectator andrew = new Spectator("Andrew", "man", 5, 0);
 
         Queue<Spectator> spectators = new PriorityQueue<>(Arrays.asList(alan, lucy, anna, andrew));
+//        Queue<Spectator> spectators = new PriorityQueue<>();
+
+//        spectators.add(alan);
+//        spectators.add(lucy);
+//        spectators.add(anna);
+//        spectators.add(andrew);
 
         System.out.println(spectators);
+
+        Spectator spectator;
+        while ((spectator = spectators.poll()) != null) {
+            System.out.println(spectator);
+        }
     }
 }
