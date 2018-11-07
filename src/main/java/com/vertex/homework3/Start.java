@@ -1,5 +1,8 @@
 package com.vertex.homework3;
 
+import com.vertex.homework3.homework4.LinkedContainer;
+import com.vertex.homework3.homework4.ListenerCreatorLinkedContainer;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -33,6 +36,11 @@ public class Start {
         HackHashSet hackHashSet = new HackHashSet();
         hackHashSet.Hacking( hashSetlissinersWhoBoughtMoreThanOne);
         bonusKlass.announcementOfTheListAndBonus(hashSetlissinersWhoBoughtMoreThanOne);
+
+        ListenerCreatorLinkedContainer listenerCreatorLinkedContainer= new ListenerCreatorLinkedContainer();
+        LinkedContainer<Lissiner> lissinerLinkedContainer;
+        lissinerLinkedContainer=listenerCreatorLinkedContainer.createListOfListenerInList(lissinerArrayList);
+        listenerCreatorLinkedContainer.print( lissinerLinkedContainer);
 
     }
 }

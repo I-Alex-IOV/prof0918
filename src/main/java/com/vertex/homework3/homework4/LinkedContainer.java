@@ -10,6 +10,25 @@ public class LinkedContainer <E extends Lissiner> implements Iterable<E> ,Desend
     private Node<E> firstNode;
     private Node<E> lstNode;
     private  int size=0;
+    private static double sizeMustacheLength=0.0;
+    private static int sizeMumberOfBrooches=0;
+
+    public static double getSizeMustacheLength() {
+        return sizeMustacheLength;
+    }
+
+    public static void setSizeMustacheLength(double sizeMustacheLength) {
+        LinkedContainer.sizeMustacheLength = sizeMustacheLength;
+    }
+
+    public static int getSizeMumberOfBrooches() {
+        return sizeMumberOfBrooches;
+    }
+
+    public static void setSizeMumberOfBrooches(int sizeMumberOfBrooches) {
+        LinkedContainer.sizeMumberOfBrooches = sizeMumberOfBrooches;
+    }
+
     public LinkedContainer() {
         lstNode = new Node<E>(null, firstNode, null);
         firstNode = new Node<E>(null, null, lstNode);
