@@ -41,6 +41,7 @@ public class ListenerCreatorLinkedContainer {
             }
         }
         System.out.println();
+        System.out.println();
         for (int i = 0; i <linkedContainerMan.size() ; i++) {
             lissinerLinkedContainer.addFirst(linkedContainerWoman.getElementBuIndex(i));
             lissinerLinkedContainer.addLast(linkedContainerMan.getElementBuIndex(i));
