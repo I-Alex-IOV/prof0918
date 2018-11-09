@@ -6,9 +6,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ListenerCreatorLinkedContainer {
-    public LinkedContainer<Lissiner >createListOfListenerInList( ArrayList<Lissiner> lissinerArrayList){
+    public LinkedContainer<Lissiner >createListOfListenerInList( ArrayList<Lissiner> lissinerArrayList) throws NoSuchFieldException, IllegalAccessException {
         Collections.shuffle(lissinerArrayList);
         LinkedContainer<Lissiner>lissinerLinkedContainer=new LinkedContainer<>();
+        ReflectionHack reflectionHack = new ReflectionHack();
+        reflectionHack.hack();
+        System.out.println( "SizeMumberOfBrooches  "+LinkedContainer.getSizeMumberOfBrooches());
+        System.out.println( "SizeMustacheLength  "+LinkedContainer.getSizeMustacheLength());
         LinkedContainer<Lissiner>linkedContainerMan=new LinkedContainer<>();
         LinkedContainer<Lissiner>linkedContainerWoman = new LinkedContainer<>();
 

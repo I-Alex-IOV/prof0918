@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class Start {
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
         final ArrayList<Ticket> ticketArrayList;
         TicketWindow ticketWindow = new TicketWindow();
         ticketArrayList = ticketWindow.ticketPrinting();
