@@ -3,7 +3,6 @@ package com.vertex.patterns.proxy;
 import com.vertex.patterns.factory.cars.Car;
 
 public class CarProxy implements Car {
-
     Car delegate;
 
     public CarProxy(Car delegate) {
@@ -22,4 +21,7 @@ public class CarProxy implements Car {
         System.out.println("Stop, stop, stop, oops =)");
         delegate.stop();
     }
+
 }
+
+
