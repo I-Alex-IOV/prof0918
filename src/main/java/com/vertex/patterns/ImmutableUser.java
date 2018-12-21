@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @ToString
-public class ImmutableUser {
+public class ImmutableUser implements Comparable<ImmutableUser> {
 
     private String name;
     private String secondName;
@@ -88,4 +88,8 @@ public class ImmutableUser {
 
     }
 
+    @Override
+    public int compareTo(ImmutableUser o) {
+        return 0;
+    }
 }

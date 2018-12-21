@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<users>
+    <user>
+        <name>Vasyl</name>
+        <age>19</age>
+        <surname>
+            <null/>
+        </surname>
+        <email>fake@mail.com</email>
+    </user>
+</users>

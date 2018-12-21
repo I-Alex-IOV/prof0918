@@ -17,4 +17,11 @@ public class CastExample {
         ((BmwE28) cars[0]).atractsGirls();
         ((MercedesG) cars[1]).scaresPeople();
     }
+
+    public class Clazz {
+
+        public class InnerClass {
+        }
+
+    }
 }

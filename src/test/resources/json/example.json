@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "name": "Vasyl",
+      "age": 19,
+      "surname": null,
+      "email": "fake@mail.com"
+    },
+    {
+      "name": "Petro",
+      "age": 22,
+      "surname": "Grygorenko",
+      "email": null
+    }
+  ]
+}
