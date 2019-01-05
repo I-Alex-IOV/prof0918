@@ -1,5 +1,6 @@
 package com.vertex;
 
+import com.vertex.model.UsersHolder;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,7 +15,7 @@ public class XmlTest {
 
     @Before
     public void setUp() throws JAXBException {
-        JAXBContext jaxbContext = JAXBContext.newInstance(JsonTest.UsersHolder.class);
+        JAXBContext jaxbContext = JAXBContext.newInstance(UsersHolder.class);
         jaxbUnmarshaller = jaxbContext.createUnmarshaller();
     }
 
@@ -22,7 +23,7 @@ public class XmlTest {
     public void readXmlFromFileTest() throws JAXBException {
         File xmlFile = new File("./src/test/resources/example.xml");
 
-        JsonTest.UsersHolder result = (JsonTest.UsersHolder) jaxbUnmarshaller.unmarshal(xmlFile);
+        UsersHolder result = (UsersHolder) jaxbUnmarshaller.unmarshal(xmlFile);
 
         System.out.println(result);
     }

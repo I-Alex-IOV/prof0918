@@ -2,17 +2,11 @@ package com.vertex;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.vertex.model.User;
+import com.vertex.model.UsersHolder;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -31,7 +25,7 @@ public class JsonTest {
     public void setUp() {
         try (FileReader jsonReader = new FileReader(getResource("json/example.json").getFile())) {
             UsersHolder usersHolder = gson.fromJson(jsonReader, UsersHolder.class);
-            users = usersHolder.users;
+            users = usersHolder.getUsers();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -61,42 +55,5 @@ public class JsonTest {
         Files.write(new File(getResource("json/example.json").getFile()).toPath(), jsonUsers.getBytes());
     }
 
-    @Builder
-    @Data
-    @NoArgsConstructor
-    @AllArgsConstructor
-    private static class User {
-        private String name;
-        private int age;
-        private String surname;
-        private String email;
-    }
-
-    @XmlRootElement(name = "users")
-    @XmlAccessorType(XmlAccessType.FIELD)
-    static class UsersHolder {
-        @XmlElement(name = "user")
-        List<User> users;
-
-        UsersHolder(List<User> users) {
-            this.users = users;
-        }
-
-        public UsersHolder() {
-        }
-
-        public List<User> getUsers() {
-            return users;
-        }
-
-        public void setUsers(List<User> users) {
-            this.users = users;
-        }
-
-        @Override
-        public String toString() {
-            return "UsersHolder{users=" + users + "}";
-        }
-    }
 }
 
