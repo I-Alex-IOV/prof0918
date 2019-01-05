@@ -2,10 +2,17 @@ package com.vertex;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.junit.Before;
 import org.junit.Test;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -30,7 +37,7 @@ public class JsonTest {
         }
     }
 
-    static URL getResource(String relativePath) {
+    private static URL getResource(String relativePath) {
         return JsonTest.class.getClassLoader().getResource(relativePath);
     }
 
@@ -55,18 +62,20 @@ public class JsonTest {
     }
 
     @Builder
-    static class User {
-        //        @XmlElement
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    private static class User {
         private String name;
-        //        @XmlElement
         private int age;
-        //        @XmlElement
         private String surname;
-        //        @XmlElement
         private String email;
     }
 
+    @XmlRootElement(name = "users")
+    @XmlAccessorType(XmlAccessType.FIELD)
     static class UsersHolder {
+        @XmlElement(name = "user")
         List<User> users;
 
         UsersHolder(List<User> users) {
