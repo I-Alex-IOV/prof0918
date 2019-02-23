@@ -6,6 +6,7 @@
 
     <groupId>com.vertex.java</groupId>
     <artifactId>prof.0918</artifactId>
+    <packaging>pom</packaging>
     <version>1.1-SNAPSHOT</version>
     <build>
         <plugins>
@@ -19,6 +20,9 @@
             </plugin>
         </plugins>
     </build>
+    <modules>
+        <module>web</module>
+    </modules>
 
 
     <dependencies>
